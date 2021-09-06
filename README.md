@@ -3,7 +3,7 @@
 ## 一、项目背景
 数据集[cnn_train.csv](https://pan.baidu.com/s/1no5LZMhnUHD5o66URbXPpg)(提取码:z3fa)包含人类面部表情的图片的label和feature。在这里，面部表情识别相当于一个分类问题，共有7个类别。<br>
 其中label包括7种类型表情：<br>
-![Image text](https://github.com/HaoliangZhou/FERNet/blob/master/result/images/7-classes.png)<br>
+[![7-classes]](https://github.com/HaoliangZhou/FERNet/blob/master/result/images/7-classes.png)<br>
 一共有28709个label，说明包含了28709张表情包。<br>
 每一行就是一张表情包4848=2304个像素，相当于4848个灰度值(intensity)(0为黑, 255为白)
 ## 二、数据预处理
@@ -15,12 +15,12 @@ face_view.py<br>
 对特征进一步处理，也就是将每个数据行的2304个像素值合成每张48*48的表情图，最后做成24000张表情包。
 ### 3.分割训练集和测试集
 cnn_picture_label.py<br>
-#### Step1:划分一下训练集和验证集。一共有28709张图片，我取前24000张图片作为训练集，其他图片作为验证集。新建文件夹cnn_train和cnn_val，将0.jpg到23999.jpg放进文件夹cnn_train，将其他图片放进文件夹cnn_val。
-#### Step2:对每张图片标记属于哪一个类别，存放在dataset.csv中，分别在刚刚训练集和测试集执行标记任务。
-#### Step3:重写Dataset类，它是Pytorch中图像数据集加载的一个基类，需要重写类来实现加载上面的图像数据集 (rewrite_dataset.py)
+Step1:划分一下训练集和验证集。一共有28709张图片，我取前24000张图片作为训练集，其他图片作为验证集。新建文件夹cnn_train和cnn_val，将0.jpg到23999.jpg放进文件夹cnn_train，将其他图片放进文件夹cnn_val.<br>
+Step2:对每张图片标记属于哪一个类别，存放在dataset.csv中，分别在刚刚训练集和测试集执行标记任务。<br>
+Step3:重写Dataset类，它是Pytorch中图像数据集加载的一个基类，需要重写类来实现加载上面的图像数据集 (rewrite_dataset.py)
 ### 三、搭建模型
 CNN_face.py<br>
-![Image text](https://github.com/HaoliangZhou/FERNet/blob/master/result/images/neural_network.jpg)
+[![neural_network]](https://github.com/HaoliangZhou/FERNet/blob/master/result/images/neural_network.jpg)
 ### 四、训练模型
 train.py<br>
 损失函数使用交叉熵，优化器是随机梯度下降SGD，其中weight_decay为正则项系数，每轮训练打印损失值，每5轮训练打印准确率。
