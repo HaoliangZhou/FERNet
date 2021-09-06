@@ -15,12 +15,9 @@ face_view.py<br>
 对特征进一步处理，也就是将每个数据行的2304个像素值合成每张48*48的表情图，最后做成24000张表情包。
 ### 3.分割训练集和测试集
 cnn_picture_label.py<br>
-#### Step1:<br>
-划分一下训练集和验证集。一共有28709张图片，我取前24000张图片作为训练集，其他图片作为验证集。新建文件夹cnn_train和cnn_val，将0.jpg到23999.jpg放进文件夹cnn_train，将其他图片放进文件夹cnn_val。
-#### Step2:<br>
-对每张图片标记属于哪一个类别，存放在dataset.csv中，分别在刚刚训练集和测试集执行标记任务。
-#### Step3:<br>
-重写Dataset类，它是Pytorch中图像数据集加载的一个基类，需要重写类来实现加载上面的图像数据集 (rewrite_dataset.py)
+#### Step1:划分一下训练集和验证集。一共有28709张图片，我取前24000张图片作为训练集，其他图片作为验证集。新建文件夹cnn_train和cnn_val，将0.jpg到23999.jpg放进文件夹cnn_train，将其他图片放进文件夹cnn_val。
+#### Step2:对每张图片标记属于哪一个类别，存放在dataset.csv中，分别在刚刚训练集和测试集执行标记任务。
+#### Step3:重写Dataset类，它是Pytorch中图像数据集加载的一个基类，需要重写类来实现加载上面的图像数据集 (rewrite_dataset.py)
 ### 三、搭建模型
 CNN_face.py<br>
 ![Image text](https://github.com/HaoliangZhou/FERNet/blob/master/result/images/neural_network.jpg)
