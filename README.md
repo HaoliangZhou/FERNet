@@ -3,6 +3,7 @@
 ## 一、项目背景
 数据集[cnn_train.csv](https://pan.baidu.com/s/1no5LZMhnUHD5o66URbXPpg)(提取码:z3fa)包含人类面部表情的图片的label和feature。在这里，面部表情识别相当于一个分类问题，共有7个类别。<br>
 其中label包括7种类型表情：<br>
+![aaa](https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=cnn&step_word=&hs=0&pn=5&spn=0&di=59400&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=2261748211%2C881952603&os=3482429243%2C1049182420&simid=3578567042%2C828439333&adpicid=0&lpn=0&ln=726&fr=&fmq=1630933276121_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=https%3A%2F%2Fgimg2.baidu.com%2Fimage_search%2Fsrc%3Dhttp%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F7047668-1603f5abc797639f.png%26refer%3Dhttp%3A%2F%2Fupload-images.jianshu.io%26app%3D2002%26size%3Df9999%2C10000%26q%3Da80%26n%3D0%26g%3D0n%26fmt%3Djpeg%3Fsec%3D1633525281%26t%3Da0f32aca51c2815e3bbec309ceabe66c&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3B3twgfi7_z%26e3Bv54AzdH3FrAzdH3Flva88nbbjnbd&gsm=4&rpstart=0&rpnum=0&islist=&querylist=&nojc=undefined)
 ![7-classes](https://github.com/HaoliangZhou/FERNet/blob/master/result/images/7-classes.png)<br>
 一共有28709个label，说明包含了28709张表情包。<br>
 每一行就是一张表情包4848=2304个像素，相当于4848个灰度值(intensity)(0为黑, 255为白)
