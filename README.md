@@ -1,7 +1,7 @@
 # FERNet
 基于深度学习的面部表情识别 (Facial-expression Recognition)
 ## 一、项目背景
-数据集[cnn_train.csv](https://pan.baidu.com/s/1no5LZMhnUHD5o66URbXPpg)(提取码:z3fa)包含人类面部表情的图片的label和feature。在这里，面部表情识别相当于一个分类问题，共有7个类别。
+数据集[cnn_train.csv](https://pan.baidu.com/s/1no5LZMhnUHD5o66URbXPpg)(提取码:z3fa)包含人类面部表情的图片的label和feature。在这里，面部表情识别相当于一个分类问题，共有7个类别。<br>
 其中label包括7种类型表情：
 ![Image text](https://github.com/HaoliangZhou/FERNet/blob/master/result/images/7-classes.png)
 一共有28709个label，说明包含了28709张表情包。
