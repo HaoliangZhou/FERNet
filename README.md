@@ -8,19 +8,19 @@
 每一行就是一张表情包4848=2304个像素，相当于4848个灰度值(intensity)(0为黑, 255为白)
 ## 二、数据预处理
 ### 1.标签与特征分离
-cnn_feature_label.py<br>
+[cnn_feature_label.py](https://github.com/HaoliangZhou/FERNet/blob/master/dataloader/cnn_feature_label.py)<br>
 对[原数据](https://pan.baidu.com/s/1no5LZMhnUHD5o66URbXPpg)(提取码:z3fa)进行处理，分离后分别保存为cnn_label.csv和cnn_data.csv.()
 ### 2.数据可视化
-face_view.py<br>
+[face_view.py](https://github.com/HaoliangZhou/FERNet/blob/master/dataloader/face_view.py)<br>
 对特征进一步处理，也就是将每个数据行的2304个像素值合成每张48*48的表情图，最后做成24000张表情包。
 ### 3.分割训练集和测试集
-cnn_picture_label.py<br>
+[cnn_picture_label.py](https://github.com/HaoliangZhou/FERNet/blob/master/dataloader/cnn_picture_label.py)<br>
 Step1:划分一下训练集和验证集。一共有28709张图片，我取前24000张图片作为训练集，其他图片作为验证集。新建文件夹cnn_train和cnn_val，将0.jpg到23999.jpg放进文件夹cnn_train，将其他图片放进文件夹cnn_val.<br>
 Step2:对每张图片标记属于哪一个类别，存放在dataset.csv中，分别在刚刚训练集和测试集执行标记任务。<br>
-Step3:重写Dataset类，它是Pytorch中图像数据集加载的一个基类，需要重写类来实现加载上面的图像数据集 (rewrite_dataset.py)
+Step3:重写Dataset类，它是Pytorch中图像数据集加载的一个基类，需要重写类来实现加载上面的图像数据集 [rewrite_dataset.py](https://github.com/HaoliangZhou/FERNet/blob/master/dataloader/rewrite_dataset.py)
 ### 三、搭建模型
-CNN_face.py<br>
+[CNN_face.py](https://github.com/HaoliangZhou/FERNet/blob/master/models/CNN_face.py)<br>
 [![neural_network]](https://github.com/HaoliangZhou/FERNet/blob/master/result/images/neural_network.jpg)
 ### 四、训练模型
-train.py<br>
+[train.py](https://github.com/HaoliangZhou/FERNet/blob/master/train.py)<br>
 损失函数使用交叉熵，优化器是随机梯度下降SGD，其中weight_decay为正则项系数，每轮训练打印损失值，每5轮训练打印准确率。
