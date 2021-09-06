@@ -18,9 +18,9 @@
 Step1:划分一下训练集和验证集。一共有28709张图片，我取前24000张图片作为训练集，其他图片作为验证集。新建文件夹cnn_train和cnn_val，将0.jpg到23999.jpg放进文件夹cnn_train，将其他图片放进文件夹cnn_val.<br>
 Step2:对每张图片标记属于哪一个类别，存放在dataset.csv中，分别在刚刚训练集和测试集执行标记任务。<br>
 Step3:重写Dataset类，它是Pytorch中图像数据集加载的一个基类，需要重写类来实现加载上面的图像数据集 ([rewrite_dataset.py](https://github.com/HaoliangZhou/FERNet/blob/master/dataloader/rewrite_dataset.py))
-### 三、搭建模型
+## 三、搭建模型
 [CNN_face.py](https://github.com/HaoliangZhou/FERNet/blob/master/models/CNN_face.py)<br>
 ![neural_network](https://github.com/HaoliangZhou/FERNet/blob/master/result/images/neural_network.jpg)
-### 四、训练模型
+## 四、训练模型
 [train.py](https://github.com/HaoliangZhou/FERNet/blob/master/train.py)<br>
 损失函数使用交叉熵，优化器是随机梯度下降SGD，其中weight_decay为正则项系数，每轮训练打印损失值，每5轮训练打印准确率。
