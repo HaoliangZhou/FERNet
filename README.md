@@ -1,7 +1,7 @@
 # FERNet
 基于深度学习的面部表情识别 (Facial-expression Recognition)
 ## 一、项目背景
-数据集[cnn_train.csv](https://pan.baidu.com/s/1no5LZMhnUHD5o66URbXPpg)(提取码:z3fa)包含人类面部表情的图片的label和feature。在这里，面部表情识别相当于一个分类问题，共有7个类别。<br>
+数据集[cnn_train.csv](https://download.csdn.net/download/qq_45588019/21981932)包含人类面部表情的图片的label和feature。在这里，面部表情识别相当于一个分类问题，共有7个类别。<br>
 其中label包括7种类型表情：<br>
 ![7-classes](https://github.com/HaoliangZhou/FERNet/blob/master/result/images/7-classes.png)<br>
 一共有28709个label，说明包含了28709张表情包。<br>
@@ -9,7 +9,7 @@
 ## 二、数据预处理
 ### 1.标签与特征分离
 [cnn_feature_label.py](https://github.com/HaoliangZhou/FERNet/blob/master/dataloader/cnn_feature_label.py)<br>
-对[原数据](https://pan.baidu.com/s/1no5LZMhnUHD5o66URbXPpg)(提取码:z3fa)进行处理，分离后分别保存为cnn_label.csv和cnn_data.csv.()
+对[原数据](https://download.csdn.net/download/qq_45588019/21981932)进行处理，分离后分别保存为cnn_label.csv和cnn_data.csv.()
 ### 2.数据可视化
 [face_view.py](https://github.com/HaoliangZhou/FERNet/blob/master/dataloader/face_view.py)<br>
 对特征进一步处理，也就是将每个数据行的2304个像素值合成每张48*48的表情图，最后做成24000张表情包。
@@ -24,3 +24,4 @@ __Step3__:重写Dataset类，它是Pytorch中图像数据集加载的一个基�
 ## 四、训练模型
 [train.py](https://github.com/HaoliangZhou/FERNet/blob/master/train.py)<br>
 损失函数使用交叉熵，优化器是随机梯度下降SGD，其中weight_decay为正则项系数，每轮训练打印损失值，每5轮训练打印准确率。
+源数据放在[CSDN](https://download.csdn.net/download/qq_45588019/21981932)
