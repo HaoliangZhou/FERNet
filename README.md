@@ -20,7 +20,7 @@ __Step2__:对每张图片标记属于哪一个类别，存放在dataset.csv中�
 __Step3__:重写Dataset类，它是Pytorch中图像数据集加载的一个基类，需要重写类来实现加载上面的图像数据集 ([rewrite_dataset.py](https://github.com/HaoliangZhou/FERNet/blob/master/dataloader/rewrite_dataset.py))
 ## 三、搭建模型
 [CNN_face.py](https://github.com/HaoliangZhou/FERNet/blob/master/models/CNN_face.py)<br>
-<div align="center"><img src="https://gitee.com/zhou-zhou123c/FERNet/raw/master/result/images/neural_network.jpg" width="800px" height="550px" alt="neural_network"></div>
+<div align="center"><img src="https://gitee.com/zhou-zhou123c/FERNet/raw/master/result/images/neural_network.jpg" width="800px" height="570px" alt="neural_network"></div>
 
 ## 四、训练模型
 [train.py](https://github.com/HaoliangZhou/FERNet/blob/master/train.py)<br>
