@@ -21,7 +21,7 @@ __Step3__:重写Dataset类，它是Pytorch中图像数据集加载的一个基�
 ## 三、搭建模型
 [CNN_face.py](https://github.com/HaoliangZhou/FERNet/blob/master/models/CNN_face.py)<br>
 ![neural_network](https://gitee.com/zhou-zhou123c/FERNet/raw/master/result/images/neural_network.jpg)
-<img src="https://gitee.com/zhou-zhou123c/FERNet/raw/master/result/images/neural_network.jpg" width="100px">
+<img src="https://gitee.com/zhou-zhou123c/FERNet/raw/master/result/images/neural_network.jpg" width="800px">
 ## 四、训练模型
 [train.py](https://github.com/HaoliangZhou/FERNet/blob/master/train.py)<br>
 损失函数使用交叉熵，优化器是随机梯度下降SGD，其中weight_decay为正则项系数，每轮训练打印损失值，每5轮训练打印准确率。<br>
